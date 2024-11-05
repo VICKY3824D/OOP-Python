@@ -11,6 +11,7 @@ class AkunBank:
             print("Saldo tidak cukup");
         else:
             self.__saldo -= jumlah;
+            print("Penarikan berhasil.");
     
     def lihat_saldo(self):
         return self.__saldo;
@@ -59,13 +60,12 @@ while True:
         if nama in akun_nasabah:
             jumlah = int(input("Jumlah penarikan: "));
             akun_nasabah[nama].tarik(jumlah);
-            print("Penarikan berhasil.")
         else:
             print("Akun nasabah tidak ditemukan.");
     
     elif pilihan == 5:
         print("Terima kasih telah menggunakan layanan kami.");
-        break
+        break;
     
     else:
         print("Pilihan tidak valid.");
